@@ -1,9 +1,9 @@
 {
   "manifest_version": 3,
 
-  "name": "Chrome Extension TypeScript Starter",
-  "description": "Chrome Extension, TypeScript, Visual Studio Code",
-  "version": "1.0",
+  "name": "acmdl to scrapbox",
+  "description": "Chrome Extension, register paper of acmdl, scrapbox",
+  "version": "0.1",
 
   "options_ui": {
     "page": "options.html"

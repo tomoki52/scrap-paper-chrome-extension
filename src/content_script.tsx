@@ -1,4 +1,10 @@
-const proj: string = "tomoki52";
+var proj: string = "";
+chrome.storage.sync.get("project", (value) => {
+  proj = value["project"];
+  console.log("projectname");
+  console.log(proj);
+});
+
 chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
   console.log("recieved");
   console.log(request);

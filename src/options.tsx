@@ -16,7 +16,7 @@ const Options = () => {
   };
   return (
     <>
-      <p>optionページ</p>
+      <p>option</p>
 
       <input
         type="text"

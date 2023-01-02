@@ -2,7 +2,7 @@
   "manifest_version": 3,
 
   "name": "acmdl to scrapbox",
-  "description": "Chrome Extension, register paper of acmdl, scrapbox",
+  "description": "Chrome Extension, register paper of acmdl, to scrapbox",
   "version": "0.1",
 
   "options_ui": {

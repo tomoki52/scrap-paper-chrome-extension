@@ -3,7 +3,7 @@
 
   "name": "Scrap Paper",
   "description": "Chrome Extension, register paper of acmdl, to scrapbox",
-  "version": "0.1",
+  "version": "0.2",
 
   "options_ui": {
     "page": "options.html"

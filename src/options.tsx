@@ -12,7 +12,6 @@ const Options = () => {
   const onClickSaveProject = () => {
     setSaveProject(project);
     chrome.storage.sync.set({ project: project });
-    console.log("saved");
   };
   return (
     <>

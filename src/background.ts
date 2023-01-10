@@ -1,10 +1,16 @@
 chrome.action.onClicked.addListener((tab: chrome.tabs.Tab) => {
-  if (tab.id == undefined) {
-    console.log("undefined.");
-    return;
-  }
-  chrome.tabs.sendMessage(tab.id, "register", (response) => {
-    console.log(response);
+  chrome.storage.sync.get("project", (value) => {
+    if (tab.id == undefined) {
+      console.log("undefined.");
+      return;
+    }
+    var proj: string = "";
+    proj = value["project"];
+    if (proj == "") {
+      chrome.tabs.create({ url: "options.html" });
+    } else {
+      chrome.tabs.sendMessage(tab.id, proj, (response) => {});
+    }
   });
 });
 

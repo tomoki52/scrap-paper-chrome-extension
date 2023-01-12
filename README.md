@@ -4,6 +4,8 @@
 
 Chrome Extension, register paper of acmdl, to scrapbox
 
+download: [Chrome webstore](https://chrome.google.com/webstore/detail/scrap-paper/cgkgikddogobbaakbmbjphgipgfbkbdo)
+
 ## Prerequisites
 
 * [node + npm](https://nodejs.org/) (Current Version)

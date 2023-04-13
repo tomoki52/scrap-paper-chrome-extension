@@ -6,7 +6,7 @@ chrome.action.onClicked.addListener((tab: chrome.tabs.Tab) => {
     }
     var proj: string = "";
     proj = value["project"];
-    if (proj == "") {
+    if (proj == "" || proj == undefined) {
       chrome.tabs.create({ url: "options.html" });
     } else {
       chrome.tabs.sendMessage(tab.id, proj, (response) => {});

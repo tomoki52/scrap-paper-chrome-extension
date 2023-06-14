@@ -15,7 +15,10 @@
 
   "content_scripts": [
     {
-      "matches": ["https://dl.acm.org/doi/*"],
+      "matches": [
+        "https://dl.acm.org/doi/*",
+        "https://ieeexplore.ieee.org/abstract/document/*"
+      ],
       "js": ["js/vendor.js", "js/content_script.js"]
     }
   ],

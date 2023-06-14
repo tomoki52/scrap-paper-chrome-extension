@@ -1,15 +1,16 @@
+var data = { project: "" };
 chrome.action.onClicked.addListener((tab: chrome.tabs.Tab) => {
   chrome.storage.sync.get("project", (value) => {
     if (tab.id == undefined) {
       console.log("undefined.");
       return;
     }
-    var proj: string = "";
-    proj = value["project"];
-    if (proj == "" || proj == undefined) {
+    data.project = value["project"] ?? "";
+    if (data.project == "" || data.project == undefined) {
       chrome.tabs.create({ url: "options.html" });
     } else {
-      chrome.tabs.sendMessage(tab.id, proj, (response) => {});
+      console.log(data);
+      chrome.tabs.sendMessage(tab.id, data, (response) => {});
     }
   });
 });

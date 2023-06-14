@@ -1,15 +1,15 @@
-chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
-  registerScrapBox(request);
-
+chrome.runtime.onMessage.addListener((data, sender, sendResponse) => {
+  const url: string = location.href;
+  if (url.includes("acm")) {
+    registerAcmScrapBox(data.project);
+  } else if (url.includes("ieee")) {
+    registerIeeeScrapBox(data.project);
+  }
   sendResponse("from content script");
 });
 
-function registerScrapBox(proj: string) {
+function registerAcmScrapBox(proj: string) {
   const url: string = location.href;
-
-  const addLink = (text: string) => {
-    return "[" + text + "]";
-  };
 
   const title_collection = document.getElementsByClassName(
     "citation__title"
@@ -64,3 +64,13 @@ function registerScrapBox(proj: string) {
       body
   );
 }
+function registerIeeeScrapBox(proj: string) {
+  const title_collection = document.getElementsByClassName(
+    "document-title"
+  ) as HTMLCollectionOf<HTMLElement>;
+  const title = title_collection[0].children[0].textContent;
+  console.log(title);
+}
+const addLink = (text: string) => {
+  return "[" + text + "]";
+};

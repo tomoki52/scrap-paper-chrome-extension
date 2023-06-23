@@ -70,7 +70,17 @@ function registerIeeeScrapBox(proj: string) {
   ) as HTMLCollectionOf<HTMLElement>;
   const title = title_collection[0].children[0].textContent;
   console.log(title);
+  const author_collection = document.getElementsByClassName(
+    "authors-info-container"
+  ) as HTMLCollectionOf<HTMLElement>;
+  const authors = Array.from(author_collection[0].children).map((e) => {
+    const author =
+      e.children[0].children[0].children[0].children[0].textContent;
+    return addLink(author);
+  });
+  console.log(authors);
 }
-const addLink = (text: string) => {
+
+const addLink = (text: string | null) => {
   return "[" + text + "]";
 };

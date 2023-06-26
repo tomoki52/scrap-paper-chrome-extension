@@ -2,7 +2,7 @@
 
 ![build](https://github.com/chibat/chrome-extension-typescript-starter/workflows/build/badge.svg)
 
-Chrome Extension, register paper of acmdl, to scrapbox
+Chrome Extension, register paper of acmdl and ieee, to scrapbox
 
 download: [Chrome webstore](https://chrome.google.com/webstore/detail/scrap-paper/cgkgikddogobbaakbmbjphgipgfbkbdo)
 
@@ -20,12 +20,6 @@ download: [Chrome webstore](https://chrome.google.com/webstore/detail/scrap-pape
 * Webpack
 * React
 * Jest
-* Example Code
-    * Chrome Storage
-    * Options Version 2
-    * content script
-    * count up badge number
-    * background
 
 ## Project Structure
 

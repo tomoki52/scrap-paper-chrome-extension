@@ -2,8 +2,8 @@
   "manifest_version": 3,
 
   "name": "Scrap Paper",
-  "description": "Chrome Extension, register paper of acmdl, to scrapbox",
-  "version": "0.2",
+  "description": "Chrome Extension, register paper of acmdl and ieee, to scrapbox",
+  "version": "0.4",
 
   "options_ui": {
     "page": "options.html"
@@ -15,7 +15,11 @@
 
   "content_scripts": [
     {
-      "matches": ["https://dl.acm.org/doi/*"],
+      "matches": [
+        "https://dl.acm.org/doi/*",
+        "https://ieeexplore.ieee.org/document/*",
+        "https://ieeexplore.ieee.org/abstract/document/*"
+      ],
       "js": ["js/vendor.js", "js/content_script.js"]
     }
   ],

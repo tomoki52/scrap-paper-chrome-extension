@@ -65,11 +65,13 @@ function registerAcmScrapBox(proj: string) {
   );
 }
 function registerIeeeScrapBox(proj: string) {
+  const url: string = location.href;
   const title_collection = document.getElementsByClassName(
     "document-title"
   ) as HTMLCollectionOf<HTMLElement>;
-  const title = title_collection[0].children[0].textContent;
+  const title = title_collection[0].children[0].textContent ?? "";
   console.log(title);
+
   const author_collection = document.getElementsByClassName(
     "authors-info-container"
   ) as HTMLCollectionOf<HTMLElement>;
@@ -79,6 +81,35 @@ function registerIeeeScrapBox(proj: string) {
     return addLink(author);
   });
   console.log(authors);
+  const conference_collection = document.getElementsByClassName(
+    "stats-document-abstract-publishedIn"
+  );
+  const conference = conference_collection[1].textContent;
+  const abstract =
+    document.getElementsByClassName("abstract-text")[0].children[0].children[0]
+      .children[1].textContent;
+  const lines: string =
+    url +
+    "\n" +
+    addLink(conference) +
+    " " +
+    "\n" +
+    authors.join(", ") +
+    "\n\n" +
+    ">" +
+    abstract +
+    "\n\n" +
+    "#survey";
+
+  var body = encodeURIComponent(lines);
+  window.open(
+    "https://scrapbox.io/" +
+      proj +
+      "/" +
+      encodeURIComponent(title.trim()) +
+      "?body=" +
+      body
+  );
 }
 
 const addLink = (text: string | null) => {

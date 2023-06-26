@@ -3,7 +3,7 @@
 
   "name": "Scrap Paper",
   "description": "Chrome Extension, register paper of acmdl and ieee, to scrapbox",
-  "version": "0.4",
+  "version": "0.5",
 
   "options_ui": {
     "page": "options.html"
@@ -17,8 +17,7 @@
     {
       "matches": [
         "https://dl.acm.org/doi/*",
-        "https://ieeexplore.ieee.org/document/*",
-        "https://ieeexplore.ieee.org/abstract/document/*"
+        "https://ieeexplore.ieee.org/document/*"
       ],
       "js": ["js/vendor.js", "js/content_script.js"]
     }

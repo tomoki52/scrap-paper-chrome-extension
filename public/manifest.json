@@ -17,8 +17,7 @@
     {
       "matches": [
         "https://dl.acm.org/doi/*",
-        "https://ieeexplore.ieee.org/document/*",
-        "https://ieeexplore.ieee.org/abstract/document/*"
+        "https://ieeexplore.ieee.org/document/*"
       ],
       "js": ["js/vendor.js", "js/content_script.js"]
     }

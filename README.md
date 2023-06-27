@@ -1,11 +1,11 @@
 # Scrap Paper Chrome Extension
-
 ![build](https://github.com/chibat/chrome-extension-typescript-starter/workflows/build/badge.svg)
 
 Chrome Extension, register paper of acmdl and ieee, to scrapbox
 
 download: [Chrome webstore](https://chrome.google.com/webstore/detail/scrap-paper/cgkgikddogobbaakbmbjphgipgfbkbdo)
 
+[!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/tomoki52)
 ## Prerequisites
 
 * [node + npm](https://nodejs.org/) (Current Version)
